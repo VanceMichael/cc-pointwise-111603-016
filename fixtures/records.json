@@ -1,0 +1,20 @@
+[
+  {
+    "sourceId": "standards-watch-demo-1",
+    "source": "sample-source",
+    "observedAt": "2026-11-16T09:00:00Z",
+    "label": "标准公告",
+    "attributes": {
+      "sample": true
+    }
+  },
+  {
+    "sourceId": "standards-watch-demo-2",
+    "source": "sample-source",
+    "observedAt": "2026-11-16T09:05:00Z",
+    "label": "标准公告 2",
+    "attributes": {
+      "sample": true
+    }
+  }
+]
