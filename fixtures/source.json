@@ -1,0 +1,58 @@
+{
+  "stages": {
+    "opening": {
+      "routes": {
+        "/standards/notices": {
+          "contentType": "text/html; charset=utf-8",
+          "body": "<!doctype html><html><body><script type=\"application/json\" class=\"source-record\">{\"standardId\": \"STD-1\", \"title\": \"设备接口标准\", \"documentVersion\": \"v1\", \"publishedAt\": \"2026-11-16T08:00:00Z\", \"file\": \"/documents/STD-1-v1\", \"sha256\": \"b5a2c96250612366ea272ffac6d9744aaf4b45aacd96aa7cfcb931ee3b558259\"}</script></body></html>",
+          "etag": "\"opening\""
+        },
+        "/documents/STD-1-v1": {
+          "contentType": "application/octet-stream",
+          "body": "dummy"
+        },
+        "/documents/STD-1-v2": {
+          "contentType": "text/plain",
+          "body": "pending",
+          "status": 404
+        }
+      }
+    },
+    "updated": {
+      "routes": {
+        "/standards/notices": {
+          "contentType": "text/html; charset=utf-8",
+          "body": "<!doctype html><html><body><script type=\"application/json\" class=\"source-record\">{\"standardId\": \"STD-1\", \"title\": \"设备接口标准勘误\", \"documentVersion\": \"v2\", \"replaces\": \"v1\", \"publishedAt\": \"2026-11-16T09:00:00Z\", \"file\": \"/documents/STD-1-v2\", \"sha256\": \"unknown\"}</script></body></html>",
+          "etag": "\"updated\""
+        },
+        "/documents/STD-1-v1": {
+          "contentType": "application/octet-stream",
+          "body": "dummy"
+        },
+        "/documents/STD-1-v2": {
+          "contentType": "text/plain",
+          "body": "pending",
+          "status": 404
+        }
+      }
+    },
+    "ready": {
+      "routes": {
+        "/standards/notices": {
+          "contentType": "text/html; charset=utf-8",
+          "body": "<!doctype html><html><body><script type=\"application/json\" class=\"source-record\">{\"standardId\": \"STD-1\", \"title\": \"设备接口标准勘误\", \"documentVersion\": \"v2\", \"replaces\": \"v1\", \"publishedAt\": \"2026-11-16T09:00:00Z\", \"file\": \"/documents/STD-1-v2\", \"sha256\": \"3def73f15b56a47bba6777da129db988df316fa2e8b10fb5a005442349585c43\"}</script></body></html>",
+          "etag": "\"updated\""
+        },
+        "/documents/STD-1-v1": {
+          "contentType": "application/octet-stream",
+          "body": "dummy"
+        },
+        "/documents/STD-1-v2": {
+          "contentType": "application/octet-stream",
+          "body": "corrected",
+          "etag": "\"std-v2\""
+        }
+      }
+    }
+  }
+}

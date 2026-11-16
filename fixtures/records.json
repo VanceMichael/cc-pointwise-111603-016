@@ -1,20 +1,16 @@
 [
   {
-    "sourceId": "standards-watch-demo-1",
-    "source": "sample-source",
-    "observedAt": "2026-11-16T09:00:00Z",
-    "label": "标准公告",
+    "sourceId": "STD-1",
+    "source": "标准公告资料库",
+    "observedAt": "2026-11-16T08:00:00Z",
+    "label": "设备接口标准",
     "attributes": {
-      "sample": true
-    }
-  },
-  {
-    "sourceId": "standards-watch-demo-2",
-    "source": "sample-source",
-    "observedAt": "2026-11-16T09:05:00Z",
-    "label": "标准公告 2",
-    "attributes": {
-      "sample": true
+      "standardId": "STD-1",
+      "title": "设备接口标准",
+      "documentVersion": "v1",
+      "publishedAt": "2026-11-16T08:00:00Z",
+      "file": "/documents/STD-1-v1",
+      "sha256": "b5a2c96250612366ea272ffac6d9744aaf4b45aacd96aa7cfcb931ee3b558259"
     }
   }
 ]
