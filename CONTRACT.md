@@ -8,4 +8,6 @@ standardId 为标准号，documentVersion 为来源文件版本；公告时间�
 
 ## 业务消费
 
-`readOperations(repository)` 当前返回 product 和 rows，每行带 sourceId/source/observedAt/attributes。现有 CLI 和结构化导入用于本地运维；新增采集结果也需要让业务读取入口看到一致状态，必要的解释信息可扩展返回。原始来源身份与 observedAt 不是通用的业务版本、完整性或成功证明。来源接口契约是兼容边界，采集、状态管理和新业务表达由实现决定。
+`readOperations(repository)` 返回 product 和 rows，每行带 sourceId/source/observedAt/attributes。传入派生状态（`readOperations(repository, libraryState)`）时附加 standards 检索视图：每个标准给出最新公告及其文件状态、最近可用版本、逐版本的替代关系（replaces/replacedBy）、当前提醒依据与文字说明。已被明确替代的旧文件标记 replaced，不作为最新标准通知；待文件版本给出原因（未上传、摘要未知、摘要不一致、来源故障等），继续采集即可重试。
+
+提醒只依据校验通过的可用版本生成，提醒记录包含引用的文件、sha256 与校验时间，通知消费状态与提醒日志持久化在派生状态中，可查询先前提醒引用过的文件。现有 CLI 和结构化导入用于本地运维；新增采集结果也需要让业务读取入口看到一致状态，必要的解释信息可扩展返回。原始来源身份与 observedAt 不是通用的业务版本、完整性或成功证明。来源接口契约是兼容边界，采集、状态管理和新业务表达由实现决定。
